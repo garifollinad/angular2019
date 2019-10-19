@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="regform-section">
+    <div class="col-md-8 offset-2">
+      <div><h2>Login Form</h2></div>
+      <!--Form for contact us-->
+      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label>
+            <input type="text" formControlName="userName" placeholder="Enter User Name">
+          </label>
+        </div>
+        <div class="form-group">
+          <label>
+            <input type="password" formControlName="password" placeholder="Enter password">
+          </label>
+        </div>
+        <button type="submit" [disabled]="!registerForm.valid">Submit</button>
+        <h4>
+          Form Status: {{ registerForm.status }}
+        </h4>
+      </form>
+      <!--Form ends here-->
+    </div>
+  </div>
+</div>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators} from '@angular/forms';
 import { Router } from '@angular/router';
+import { DatastoreService} from '../../datastore.service';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -11,7 +12,7 @@ export class RegisterComponent implements OnInit {
   registerForm: FormGroup;
   submitted = false;
 
-  constructor( private formBuilder: FormBuilder, private router: Router) { }
+  constructor( private formBuilder: FormBuilder, private router: Router, private datastoreservice: DatastoreService) { }
 
   ngOnInit() {
     this.registerForm = this.formBuilder.group({
@@ -37,10 +38,10 @@ export class RegisterComponent implements OnInit {
     }
 
     const {username, password} = this.registerForm.value;
+    this.datastoreservice.user.next(this.registerForm.get('userName').value);
 
-    this.router.navigate(['/login']);
+    this.router.navigate(['/home-page']);
 
-    alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value));
   }
 }
 
