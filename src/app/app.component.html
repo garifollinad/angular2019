@@ -1,0 +1,33 @@
+<header class="main-header clearfix">
+  <div class="container" > 
+    <div class="logo">
+      <figure>
+        <a href="index.html">
+            <img src="assets/images/logo.png" alt="World Travel Guide logo">
+         </a>
+      </figure>
+    </div>
+    <!--Navigation starts here-->
+    <nav class=" navbar clearfix">
+      <a href="javascript:void(0);" class="icon navbar-toggle" onclick="myFunction()"><i class="fa fa-bars" aria-hidden="true"></i> </a>
+      <div class="topnav" id="myTopnav">	
+        <ul>
+          <li><a routerLink="/home-page" routerLinkActive="active">Home</a></li>
+          <li><a routerLink="/about-us" routerLinkActive="active">About Us</a></li>
+          <li><a routerLink="/register" routerLinkActive="active">Register</a></li>
+        </ul>
+      </div>	
+      <!--Navigation ends here-->			
+    </nav>		
+  </div>
+</header>
+<router-outlet></router-outlet>
+<!--Footer section-->
+<footer class="main-footer">
+  <div class="container">
+      <div class="copyright">
+          <p>&copy; World Travel Guide 2019</p>
+      </div>
+  </div>
+</footer>
+
