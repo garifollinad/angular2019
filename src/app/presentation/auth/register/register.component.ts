@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators} from '@angular/forms';
 import { Router } from '@angular/router';
-import { DatastoreService} from '../../datastore.service';
+import { DatastoreService} from '../../../shared/service/datastore.service';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',

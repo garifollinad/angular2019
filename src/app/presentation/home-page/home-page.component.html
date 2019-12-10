@@ -1,0 +1,55 @@
+<h1>Welcome {{user}}</h1>
+
+<section class="slider">
+  <ul>
+    <li>
+      <figure>
+        <img src="assets/images/ban.png" alt="Banner Image">
+      </figure>
+    </li>
+  </ul>
+</section>
+<!--About us section-->
+<section class="our-services-section clearfix">
+  <div class="container">
+    <header>
+      <h2 class="sales">{{ sales | uppercase }}</h2>
+      <br>
+      <h2>Latest Country Guides </h2>
+      <h2 class="countries" appHighlight>{{ countries | join:1 }}</h2>
+      <p>The World Travel Guide (WTG) is the flagship digital consumer brand within the Columbus Travel Media portfolio.
+        A comprehensive guide to the world’s best travel destinations, its print heritage stretches back 30 years, with
+        the online portal reaching its 15-year anniversary in 2014. Available in English, German and Spanish versions,
+        the WTG provides detailed and accurate travel content designed to inspire global travellers.</p>
+    </header>
+    <ul class="clearfix" *ngFor="let image of (visibleImages)">
+      <li class="wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="300ms">
+        <div class="service-box">
+          <h3>{{image.name }}</h3>
+          <figure class="image-outer">
+            <img src="{{image.url}}" alt="sample image">
+          </figure>
+          <p>{{image.description}}</p>
+          <a [routerLink]="['/image', image.id]" class="btn">Read More</a></div>
+      </li>
+      <li class="wow fadeInDown" data-wow-duration="2000ms" data-wow-delay="600ms">
+        <div class="service-box">
+          <h3>{{image.name}}</h3>
+          <figure class="image-outer">
+            <img src="{{image.url}}" alt="sample image">
+          </figure>
+          <p>{{image.description}}</p>
+          <a [routerLink]="['/image', image.id]" class="btn">Read More</a></div>
+      </li>
+      <li class="wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="900ms">
+        <div class="service-box">
+          <h3>{{image.name}}</h3>
+          <figure class="image-outer">
+            <img src="{{image.url}}" alt="sample image">
+          </figure>
+          <p>{{image.description}} </p>
+          <a [routerLink]="['/image', image.id]" class="btn">Read More</a></div>
+      </li>
+    </ul>
+  </div>
+</section>

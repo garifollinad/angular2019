@@ -1,0 +1,11 @@
+
+<nav>
+  <button  class="btn"  (click)="open()">Luggage / Handbag size</button>
+</nav>
+
+<div [@openClose]="isOpen ? 'open' : 'closed'"
+     (@openClose.start)="onAnimationEvent($event)"
+     (@openClose.done)="onAnimationEvent($event)"
+     class="open-close-container">
+  <p>Carry-on {{ isOpen ? 'Luggage' : 'Handbag' }} size should be {{ isOpen ? '225 x 155 x 60' : '55 x 35 x 22' }}</p>
+</div>

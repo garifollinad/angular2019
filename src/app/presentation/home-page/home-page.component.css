@@ -1,0 +1,17 @@
+.sales {
+  border: 4px solid black;
+  border-radius: .25em;
+  color: black;
+  cursor: pointer;
+  font-size: 85px;
+  outline: 0;
+}
+
+.countries {
+  border: 4px solid black;
+  border-radius: .25em;
+  color: rebeccapurple;
+  cursor: pointer;
+  font-size: 35px;
+  outline: 0;
+}

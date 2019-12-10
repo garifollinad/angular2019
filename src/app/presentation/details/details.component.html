@@ -1,0 +1,35 @@
+<ul class="clearfix"  >
+  <div class="wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="300ms">
+    <div class="service-box">
+      <h1 class="country">{{image.name}}</h1>
+      <figure class="image-outer">
+        <a [routerLink] ="['/image', image.id]">
+          <img class="image" src="{{image.url}}" alt="sample image">
+        </a>
+      </figure>
+      <p class="text">{{image.description}}</p>
+      </div>
+  </div>
+</ul>
+
+<div style="text-align:center">
+  <star-rating  value="5" totalstars="5" checkedcolor="red" uncheckedcolor="black" size="24px" readonly="false"  (rate)="onRate($event)"></star-rating>
+  <button class="add" (click)="changeStars()">Save</button>
+</div>
+
+<div class="comment">
+  <p *ngIf="hasComments">Comments:</p>
+  <ul class="list-group" *ngIf="hasComments">
+    <div  *ngFor="let comment of comments" class="list-group-item" >
+      {{ comment }}
+    </div>
+  </ul>
+
+</div>
+<div class="col-md-12 caption-row" class="centerPadding">
+  <div *ngIf="!showComment">
+    <textarea (keyup)="onCommentChange($event)"
+              rows="4" cols="50" name="comment"  id="usrform" placeholder="Type here..."></textarea>
+    <button class="add" (click)="changeComment()">Comment</button>
+  </div>
+</div>

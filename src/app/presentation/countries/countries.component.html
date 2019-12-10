@@ -1,0 +1,16 @@
+<h2>List of tropical countries</h2>
+
+<form>
+  <input  class="input" #criteria (input)="updateCriteria(criteria.value)" placeholder="Find your destination" />
+</form>
+
+<button  class="btn" (click)="sortByName(name)">Sort by name</button>
+
+<ul class="countries" [@filterAnimation]="countryTotal">
+  <li *ngFor="let country of listOfCountries | orderBy: name :reverse " class="country">
+    <div class="inner">
+      <span class="badge">{{ country.id }}</span>
+      <span>{{ country.name  }}</span>
+    </div>
+  </li>
+</ul>

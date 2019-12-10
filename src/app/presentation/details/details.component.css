@@ -1,0 +1,56 @@
+.country {
+  font-size: 70px;
+  text-align: center;
+}
+
+.image {
+  alignment-baseline: center;
+  width: 1000px;
+  height: 500px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text {
+  font-size: 30px;
+  text-align: center;
+}
+
+.comment {
+  font-size: 20px;
+  text-align: center;
+}
+
+.center {
+  text-align: center;
+}
+
+.add {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+
+.centerPadding {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.star {
+  font-size: 1.5rem;
+  color: #b0c4de;
+}
+.filled {
+  color: #1e90ff;
+}
+.bad {
+  color: #deb0b0;
+}
+.filled.bad {
+  color: #ff1e1e;
+}
+p {
+  font-family: Lato;
+}
